@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #121212;
+  color: #dddcdc;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.tribute-container {
+  max-width: 1000px;
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 3.4rem;
+  color: #f5c518;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  text-shadow: 0 0 8px rgba(245, 197, 24, 0.7);
+}
+
+.sub {
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #bbb;
+  font-weight: 500;
+}
+
+/* Main content */
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.main-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(245, 197, 24, 0.3);
+  transition: transform 0.4s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+.main-img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 25px 60px rgba(245, 197, 24, 0.6);
+}
+
+.bio {
+  background: rgba(245, 197, 24, 0.08);
+  border-radius: 20px;
+  padding: 30px 40px;
+  font-size: 1.15rem;
+  color: #eee;
+  box-shadow: inset 0 0 20px rgba(245, 197, 24, 0.15);
+  line-height: 1.8;
+  border-left: 6px solid #f5c518;
+}
+
+/* Images section */
+.images {
+  text-align: center;
+}
+
+.images h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #f5c518;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.image-grid {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.image-grid img {
+  width: 280px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(245, 197, 24, 0.25);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: 0 20px 50px rgba(245, 197, 24, 0.5);
+}
+
+/* Quote section */
+.quote-section {
+  margin-top: 50px;
+  text-align: center;
+  padding: 40px 20px;
+  background: radial-gradient(circle, rgba(245, 197, 24, 0.1), rgba(255, 255, 255, 0.02));
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(245, 197, 24, 0.1);
+  transition: background 0.5s ease-in-out;
+}
+
+button {
+  padding: 15px 30px;
+  background-color: #f5c518;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(245, 197, 24, 0.4);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #d4aa0a;
+  transform: scale(1.08);
+  box-shadow: 0 12px 28px rgba(245, 197, 24, 0.5);
+}
+
+#quote {
+  margin-top: 25px;
+  font-size: 1.6rem;
+  color: #fff7c2;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 500;
+  max-width: 700px;
+  margin: 25px auto 0 auto;
+  padding: 20px;
+  border-left: 5px solid #f5c518;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(245, 197, 24, 0.15);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 50px;
+  font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .main-img {
+    max-width: 80vw;
+  }
+
+  .bio {
+    padding: 25px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2.4rem;
+  }
+
+  .images h3 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    width: 90%;
+    font-size: 1.1rem;
+  }
+
+  #quote {
+    font-size: 1.2rem;
+  }
+}
